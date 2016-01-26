@@ -1,0 +1,28 @@
+<h1>Welcome to the Travel App</h1>
+<p>This is a very cool place for travel</p>
+
+
+<p>
+	<%= @homeland %>
+
+</p>
+
+<ol>
+	<% @countries.each do|country| %>
+
+	<li><%= country %></li>
+	<% end %>
+
+</ol>
+
+<p> 
+	<% @travel_pics.each do |alt, pic| %>
+		<%= image_tag pic, altl:alt, width: "250" %>
+	<% end %>	
+
+<!-- use the above (calls from an array of pictures) instead of writing each one out like below -->
+	<!-- <%= image_tag "mexico-1.jpg", alt: "Mexico Beach 1" , width: "250" %> -->
+ 	<!-- <%= image_tag "mexico2.jpg", alt: "Mexico Beach 1" , width: "250" %> -->
+  <!-- <%= image_tag "mexico beach.jpg", alt: "Mexico Beach 1" , width: "250" %>  -->
+
+</p>
